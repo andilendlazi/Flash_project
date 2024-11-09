@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Select Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="social-icons">
+            <a id="facebook"href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+                <img src="{{ url_for('static', filename='facebook_icon.png') }}" alt="Facebook" width="24" height="24">
+            </a>
+            <a id="x" href="https://www.twitter.com/yourprofile" target="_blank" aria-label="twitter">
+                <img src="{{ url_for('static', filename='X_icon.png') }}" alt="Twitter" width="24" height="24">
+            </a>
+            <a id="insta" href="https://www.instagram.com/yourprofile" target="_blank" aria-label="instagram">
+                <img src="{{ url_for('static', filename='insta_icon.jpeg') }}" alt="Tnstagram" width="24" height="24">
+            </a>
+            <a id="linkedin" href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="linkedin">
+                <img src="{{ url_for('static', filename='linkedin_icon.png') }}" alt="Linkedin" width="24" height="24">
+            </a>
+            <a id="git" href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="gitup">
+                <img src="{{ url_for('static', filename='gitup_icon.png') }}" alt="Gitup" width="24" height="24">
+            </a>
+        </div>
+    </header>
+    <div class="game-description">
+        <h1>Welcome to a Guessing Game!</h1>
+        <p>Test your knowledge about countries and football clubs.
+            <br>
+            Choose a category and guess from the  facts. 
+            <br>
+            See if you can get them all right!</p>
+    </div>
+    <div class="category-container">
+        <div class="category-card">
+            <img src="{{ url_for('static', filename='imageseurope.jpeg') }}" alt="Countries">
+            <h2>Countries</h2>
+            <p>Casual - Free</p>
+            <form action="{{ url_for('start_game') }}" method="post">
+                <input type="hidden" name="category" value="countries">
+                <button type="submit">Play Now</button>
+            </form>
+        </div>
+        <div class="category-card">
+            <img src="{{ url_for('static', filename='output (2).jpg') }}" alt="football clubs">
+            <h2>Football Clubs</h2>
+            <p>Adventure - Free</p>
+            <form action="{{ url_for('start_game') }}" method="post">
+                <input type="hidden" name="category" value="football_clubs">
+                <button type="submit">Play Now</button>
+            </form>
+        </div> 
+    </div>
+    <!--<a class="category-card">
+        <a href="{{ url_for('start_game') }}" target="_blank">
+            <img src="{{ url_for('static', filename='imageseurope.jpeg') }}" alt="Countries">
+            <input type="hidden" name="category" value="countries_europe">
+        </a>
+    <a class="category-card">
+        <a href="{{ url_for('start_game') }}" target="_blank">
+            <img src="{{ url_for('static', filename='output (2).jpeg') }}" alt="football clubs">
+            <input type="hidden" name="category" value="football_clubs">
+        </a>
+    </a>-->
+    </div>
+      
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Guess the Category</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='render.css')}}">
+    
+</head>
+<body>
+    <h1>Guess the Country</h1>
+    <p>{{ fact }}</p>
+    <p>Tries Remaining: {{ tries }}</p>
+
+    {% if message %}
+        <p style="color: red;">{{ message }}</p>
+    {% endif %}
+    <br>
+    <form action="/guess" method="POST">
+        <label form="guess">Your Guess:</label>
+        <br>
+        <input type="text" name="guess" id="guess" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="timer">Time Remaining:  <span id=time>30</span> seconds</p>
+
+    <script>
+        let timeLeft = 30;
+        const timerElement = document.getElementById("time");
+
+        const countdown = setInterval(() => {
+            
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            if (timeLeft<=0){
+                clearInterval(countdown);
+                alert("Time's up! submitting your guess.");
+                document.forms[0].submit();
+            }
+        }, (1000));
+    </script>
+</body>
+</html>

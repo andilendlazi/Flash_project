@@ -1,0 +1,134 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /*text-align: center;*/
+    background-color: #cdc2bb;
+    /*background-image: url("20240405_081241.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+}
+
+@media screen and (min-width:1024px){
+    .container{
+        width: 60%;
+    }
+    
+}
+
+@media  screen and (min-width:768px) and (max-width:1023px) {
+    .container{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .container{
+        width: 90%;
+        padding: 10px;
+        margin-right: 80%;
+
+    }
+    
+}
+
+/*h1 {
+    /*overflow: hidden;
+    background-color: #3B945E;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    padding: 20px;
+    margin-bottom: 60px;
+    color: #000000;
+    text-align: left;
+
+}
+*/
+
+.category-container {
+    /*margin-bottom: 90%;*/
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 40%;
+}
+
+.category-card {
+    background-color: #4D281E;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.category-card h2 {
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+.category-card p {
+    color: #000000;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.category-card button {
+    margin: 10px 0 20px;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+    background-color: #C4A99B;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category-card button:hover {
+    background-color: #4D281E;
+}
+
+a{
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.social-icons{
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+    margin-left: 70%;
+    gap: 50px;
+}
+
+#facebook{
+    margin-right: 20px;
+}
+
+#x{
+    margin-right: 40px;
+}
+
+.game-description{
+    margin-left: 20%;
+    margin-bottom: 20%;
+    text-align: left;
+}
+
+
